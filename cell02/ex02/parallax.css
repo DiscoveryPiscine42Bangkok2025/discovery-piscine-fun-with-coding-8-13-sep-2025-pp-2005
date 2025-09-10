@@ -6,7 +6,6 @@
 *{box-sizing:border-box}
 html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial}
 
-/* Hero (first background image) */
 .hero{
     height:100vh;
     min-height:480px;
@@ -20,13 +19,12 @@ html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Robo
     background-position:center;
     position:relative;
 }
-/* slight dark overlay to ensure text contrast */
 .hero::before{
     content:'';
     position:absolute;inset:0;background:var(--overlay);
 }
 .hero .msg{
-    position:relative; /* above overlay */
+    position:relative;
     max-width:80ch;
     padding:14px 20px;
     border-radius:12px;
@@ -38,7 +36,6 @@ html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Robo
 }
 .hero .msg small{display:block;opacity:0.85;font-size:0.85em}
 
-/* Middle black block */
 .black-block{
     min-height:70vh;
     display:flex;
@@ -55,7 +52,6 @@ html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Robo
     line-height:1.45;
 }
 
-/* Bottom image section */
 .bottom{
     height:100vh;
     min-height:480px;
@@ -83,7 +79,6 @@ html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Robo
     box-shadow:0 10px 30px rgba(0,0,0,0.5);
 }
 
-/* responsive tweaks */
 @media (max-width:600px){
     .hero{background-attachment:scroll}
     .bottom{background-attachment:scroll}
