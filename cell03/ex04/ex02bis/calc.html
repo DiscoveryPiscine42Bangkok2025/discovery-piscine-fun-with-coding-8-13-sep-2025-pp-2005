@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Basic Calculator (jQuery)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+    .calculator {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 250px;
+    }
+    input, select, button {
+      padding: 8px;
+      font-size: 16px;
+    }
+    button, input[type=submit] {
+      cursor: pointer;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <div class="calculator">
+    <input type="text" id="left" placeholder="Left number">
+    <select id="operator">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+      <option value="%">%</option>
+    </select>
+    <input type="text" id="right" placeholder="Right number">
+    <input type="submit" value="Try me!" id="calculate">
+  </div>
+
+  <script>
+    function isPositiveInteger(value) {
+      return /^\d+$/.test(value);
+    }
+
+    $(document).ready(function() {
+      $('#calculate').on('click', function() {
+        const left = $('#left').val();
+        const right = $('#right').val();
+        const operator = $('#operator').val();
+
+        if (!isPositiveInteger(left) || !isPositiveInteger(right)) {
+          alert('Error :(');
+          return;
+        }
+
+        const num1 = parseInt(left, 10);
+        const num2 = parseInt(right, 10);
+        let result;
+
+        if ((operator === '/' || operator === '%') && num2 === 0) {
+          alert("It’s over 9000!");
+          console.log("It’s over 9000!");
+          return;
+        }
+
+        switch (operator) {
+          case '+': result = num1 + num2; break;
+          case '-': result = num1 - num2; break;
+          case '*': result = num1 * num2; break;
+          case '/': result = num1 / num2; break;
+          case '%': result = num1 % num2; break;
+        }
+
+        alert('Result: ' + result);
+        console.log('Result:', result);
+      });
+
+      setInterval(() => {
+        alert('Please, use me...');
+      }, 30000);
+    });
+  </script>
+</body>
+</html>
