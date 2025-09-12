@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRINCE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-900 text-white flex flex-col min-h-screen">
+
+    <div id="navbar"></div>
+    <script>
+        fetch('navbar.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('navbar').innerHTML = data)
+            .then(() => {
+                const btn = document.getElementById('menu-btn');
+                const menu = document.getElementById('mobile-menu');
+                btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+            });
+    </script>
+
+    <header class="text-center py-16 bg-gradient-to-r from-purple-700 to-purple-500 pt-28">
+        <img src="./image/Prince2.jpg" alt="Profile Picture"
+            class="w-40 h-40 mx-auto rounded-full border-4 border-white shadow-lg mb-6">
+        <h1 class="text-5xl md:text-6xl font-bold">Princesapat Miphetattamongkhon</h1>
+        <p class="text-xl md:text-2xl text-gray-200 mt-4">Student | Future Web Developer</p>
+    </header>
+
+    <main class="flex-grow">
+
+        <section id="about" class="max-w-4xl mx-auto px-6 py-12 text-center my-20">
+            <h2 class="text-3xl font-bold text-purple-400 mb-6">About Me</h2>
+            <p class="text-lg text-gray-300 leading-relaxed">
+                I love developing web and is looking to improve my skills.
+            </p>
+        </section>
+
+        <section id="education" class="bg-gray-800 py-12 my-20">
+            <div class="max-w-4xl mx-auto px-6">
+                <h2 class="text-3xl font-bold text-purple-400 mb-6 text-center">Education</h2>
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-xl font-semibold">[Chonchai / Lat krabang university]</h3>
+                        <p class="text-gray-300">[Years 2]</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="showcase" class="py-12 my-20">
+            <div class="max-w-6xl mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold text-purple-400 mb-6">Showcase</h2>
+
+                <h3 class="text-2xl font-semibold text-white mb-4 my-20">Skills</h3>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mb-12">
+                    <span class="bg-gray-700 py-3 rounded-lg">HTML</span>
+                    <span class="bg-gray-700 py-3 rounded-lg">CSS</span>
+                    <span class="bg-gray-700 py-3 rounded-lg">JavaScript</span>
+                    <span class="bg-gray-700 py-3 rounded-lg">TailwindCSS</span>
+                    <span class="bg-gray-700 py-3 rounded-lg">Problem Solving</span>
+                    <span class="bg-gray-700 py-3 rounded-lg">Teamwork</span>
+                </div>
+
+
+                <h3 class="text-2xl font-semibold text-white mb-4 my-20">Experience</h3>
+                <div class="space-y-6 mb-12">
+                    <div class="bg-gray-700 rounded-lg shadow-lg p-6">
+                        <h4 class="text-xl font-semibold mb-2">Fun with code</h4>
+                        <p class="text-gray-400">Grade A</p>
+                    </div>
+                </div>
+
+
+                <h3 class="text-2xl font-semibold text-white mb-4 my-20">History</h3>
+                <div class="space-y-6">
+                    <div class="bg-gray-700 rounded-lg shadow-lg p-6">
+                        <h4 class="text-xl font-semibold mb-2">2024 - Joined University</h4>
+                        <p class="text-gray-300">Started Bachelor’s program in Computer Engineer.</p>
+                    </div>
+                    <div class="bg-gray-700 rounded-lg shadow-lg p-6">
+                        <h4 class="text-xl font-semibold mb-2">2024 - Mini Project</h4>
+                        <p class="text-gray-300">Built finite state Project.</p>
+                    </div>
+                    <div class="bg-gray-700 rounded-lg shadow-lg p-6">
+                        <h4 class="text-xl font-semibold mb-2">2024 - Final Project</h4>
+                        <p class="text-gray-300">Robot Car</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="bg-gray-800 py-12 my-20">
+            <div class="max-w-4xl mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold text-purple-400 mb-6">Contact</h2>
+                <p class="text-lg text-gray-300 mb-2">📍 Address: <span class="text-white">1 Chalong Krung 1 alley, Lat
+                        Krabang, Bangkok 10520</span></p>
+                <p class="text-lg text-gray-300 mb-2">Email: <span
+                        class="text-white">princemiphetattamongkhon@gmail.com</span></p>
+                <p class="text-lg text-gray-300 mb-2">📞 Phone: <span class="text-white">0959527341</span></p>
+                <p class="text-lg text-gray-300">📸 Instagram:
+                    <a href="https://www.instagram.com/pmxch_/" target="_blank" class="text-white underline">
+                        @pmxch_
+                    </a>
+                </p>
+                <p class="text-lg text-gray-300">facebook:
+                    <a href="https://www.facebook.com/share/1CYyXk7qhK/" target="_blank" class="text-white underline">
+                        @Princesapat
+                    </a>
+                </p>
+            </div>
+        </section>
+    </main>
+
+
+</body>
+
+</html>

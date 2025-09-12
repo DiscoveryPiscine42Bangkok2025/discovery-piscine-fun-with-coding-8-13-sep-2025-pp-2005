@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>INK</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./css/cv.css">
+</head>
+
+<body class="flex flex-col min-h-screen bg-fixed bg-cover bg-center">
+
+  <div id="navbar"></div>
+  <script>
+    fetch('navbar.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('navbar').innerHTML = data)
+      .then(() => {
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+      });
+  </script>
+
+  <main class="flex-grow flex flex-col items-center text-center p-8 pt-28">
+
+    <section id="about" class="mb-16 scroll-mt-28 max-w-4xl w-full">
+      <h1 class="heading-primary">Pitchayapa Pantdej</h1>
+      <img src="./image/ink2.jpg" alt="Profile" class="profile-img">
+      <p class="nickname">INK</p>
+      <p class="subtitle">hello kub pee tutor</p>
+    </section>
+
+    <section id="education" class="mb-16 scroll-mt-28 max-w-4xl w-full">
+      <h2 class="heading-secondary">Education History</h2>
+
+      <div class="flex flex-col items-center">
+        <div class="edu-card">
+          <img src="https://bfitsthailand.com/wp-content/uploads/2023/08/BR.png" alt="School 1" class="edu-img">
+          <h3 class="edu-title">High School</h3>
+          <p class="edu-year">2018 - 2024</p>
+          <p class="edu-detail">Benjamarachalai School</p>
+        </div>
+
+        <div class="arrow">↓</div>
+
+        <div class="edu-card">
+          <img src="https://www.eng.kmitl.ac.th/storage/2024/06/About-4-C.png" alt="School 2" class="edu-img">
+          <h3 class="edu-title">University</h3>
+          <p class="edu-year">2024 - Now</p>
+          <p class="edu-detail">King Mongkut's Institute of Technology Ladkrabang</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="showcase">
+      <h2 class="heading-secondary">Showcase</h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <figure class="showcase-card">
+          <div class="showcase-img-wrap">
+            <img src="./image/ac1.jpg" alt="Activity 1" class="showcase-img">
+          </div>
+          <figcaption class="showcase-caption">CE Boost Up</figcaption>
+        </figure>
+
+        <figure class="showcase-card">
+          <div class="showcase-img-wrap">
+            <img src="./image/ac2.jpg" alt="Activity 2" class="showcase-img">
+          </div>
+          <figcaption class="showcase-caption">First Gear</figcaption>
+        </figure>
+
+        <figure class="showcase-card">
+          <div class="showcase-img-wrap">
+            <img src="./image/ac3.jpg" alt="Activity 3" class="showcase-img">
+          </div>
+          <figcaption class="showcase-caption">K-Engineering</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="footer">
+    <h2 class="footer-title">Contact Me</h2>
+    <div class="flex justify-center space-x-8">
+      <a href="mailto:67010631@kmitl.ac.th" class="social-link">
+        <img src="https://cdn.iconscout.com/icon/free/png-256/free-gmail-logo-icon-svg-download-png-2476484.png?f=webp"
+          alt="Email" class="social-icon">
+      </a>
+      <a href="https://github.com/DiscoveryPiscine42Bangkok2025/discovery-piscine-fun-with-coding-8-13-sep-2025-pp-2005.git"
+        target="_blank" class="social-link">
+        <img src="https://images.icon-icons.com/3685/PNG/512/github_logo_icon_229278.png" alt="GitHub"
+          class="social-icon">
+      </a>
+      <a href="https://www.instagram.com/dhzkshsu/" target="_blank" class="social-link">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968776.png" alt="Instagram" class="social-icon">
+      </a>
+    </div>
+  </footer>
+
+</body>
+</html>
