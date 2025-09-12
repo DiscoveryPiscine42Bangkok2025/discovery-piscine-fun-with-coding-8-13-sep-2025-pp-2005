@@ -1,0 +1,38 @@
+body {
+    background-image: url('https://i.pinimg.com/originals/9f/ab/6d/9fab6d1b46ee2cc3e1f4a0aec25815dc.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Playfair Display', serif;
+}
+
+.cv-card {
+  display: block;
+  background: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+}
+.cv-card:hover {
+  transform: scale(1.15);
+}
+.cv-img {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+}
+.cv-info {
+  padding: 1.5rem;
+  text-align: center;
+}
+.cv-nickname {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #4f46e5;
+  margin-bottom: 0.25rem;
+}
+.cv-name {
+  color: #4b5563;
+  font-size: 0.95rem;
+}
